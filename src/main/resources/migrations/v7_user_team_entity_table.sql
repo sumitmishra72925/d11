@@ -1,0 +1,20 @@
+CREATE TABLE user_team (
+	id serial PRIMARY KEY,
+	uuid UUID,
+	user_id UUID,
+	match_id UUID,
+	player1 UUID,
+	player2 UUID,
+	player3 UUID,
+	player4 UUID,
+	player5 UUID,
+	player6 UUID,
+	player7 UUID,
+	player8 UUID,
+	player9 UUID,
+	captain UUID,
+	vice_captain UUID,
+	team_name VARCHAR(255),
+	created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP
+);
