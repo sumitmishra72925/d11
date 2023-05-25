@@ -1,10 +1,12 @@
 package com.project.d11.models.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.project.d11.models.dto.JoinedTeamData;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -35,5 +37,8 @@ public class CreateContestResponse {
 
     @JsonProperty(value = "first_prize")
     String firstPrize;
+
+    @JsonProperty("team_list")
+    List<JoinedTeamData> teamList;
 
 }

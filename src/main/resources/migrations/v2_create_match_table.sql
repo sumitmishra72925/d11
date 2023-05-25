@@ -6,8 +6,8 @@ CREATE TABLE match (
 	team2_id UUID,
 	prize_pool VARCHAR(255),
 	start_time TIMESTAMP,
-	is_live BOOLEAN DEFAULT FALSE,
-	is_completed BOOLEAN DEFAULT FALSE,
+	is_live BOOLEAN,
+	is_completed BOOLEAN,
 	created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP
 );

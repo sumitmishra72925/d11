@@ -37,4 +37,7 @@ public class UserMatchTeamDetails {
 
     @JsonProperty("vice_captain")
     String viceCaptain;
+
+    @JsonProperty("total_point")
+    String totalPoint;
 }

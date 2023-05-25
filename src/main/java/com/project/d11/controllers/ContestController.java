@@ -4,6 +4,8 @@ package com.project.d11.controllers;
 import com.project.d11.models.BaseResponse;
 import com.project.d11.models.request.CreateContestRequest;
 import com.project.d11.models.request.CreateMatchRequest;
+import com.project.d11.models.request.JoinContestRequest;
+import com.project.d11.models.response.MyContestResponse;
 import com.project.d11.services.ContestService;
 import com.project.d11.services.MatchService;
 import lombok.extern.slf4j.Slf4j;
@@ -39,5 +41,16 @@ public class ContestController {
     @GetMapping("/breakup")
     public BaseResponse getContestBreakup(@RequestParam String contestId){
         return contestService.getContestBreakUp(UUID.fromString(contestId));
+    }
+
+
+    @PostMapping("/join-contest")
+    public BaseResponse joinContest(@RequestBody JoinContestRequest joinContestRequest){
+        return contestService.joinContest(joinContestRequest);
+    }
+
+    @GetMapping("my-contest")
+    public MyContestResponse getMyContest(@RequestParam String userId, @RequestParam String matchId){
+        return contestService.getMyContest(UUID.fromString(userId), UUID.fromString(matchId));
     }
 }

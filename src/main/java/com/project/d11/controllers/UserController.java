@@ -39,7 +39,7 @@ public class UserController {
     }
 
     @GetMapping("/get-teams")
-    public UserMatchTeamResponse getTeam(@RequestParam String userId, String matchId){
+    public UserMatchTeamResponse getTeam(@RequestParam String userId, @RequestParam String matchId){
         return userService.getTeam(UUID.fromString(userId), UUID.fromString(matchId));
     }
 
@@ -47,6 +47,4 @@ public class UserController {
     public UserWalletResponse getUserWalletData(@RequestParam String userId){
         return userService.getWalletData(UUID.fromString(userId)) ;
     }
-
-
 }

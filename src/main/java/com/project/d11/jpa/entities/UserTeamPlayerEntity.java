@@ -9,25 +9,26 @@ import org.hibernate.annotations.TypeDef;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "user_team")
+@Table(name = "user_team_player")
 @Data
 @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
-public class UserTeamEntity extends D11BaseEntity {
+public class UserTeamPlayerEntity extends D11BaseEntity {
 
-    @Column(name = "user_id")
-    UUID userId;
+    @Column(name = "user_team_id")
+    UUID userTeamId;
 
-    @Column(name = "match_id")
-    UUID matchId;
+    @Column(name = "player_id")
+    UUID playerId;
 
-    @Column(name = "team_name")
-    String teamName;
+    @Column(name = "is_captain")
+    Boolean isCaptain = false;
 
-    @Column(name = "total_points")
-    Double totalPoints = 0.0;
+    @Column(name = "is_vice_captain")
+    Boolean isViceCaptain = false;
 
+    @Column(name = "points_scored")
+    Double pointsScored = 0.0;
 }

@@ -3,18 +3,9 @@ CREATE TABLE user_team (
 	uuid UUID,
 	user_id UUID,
 	match_id UUID,
-	player1 UUID,
-	player2 UUID,
-	player3 UUID,
-	player4 UUID,
-	player5 UUID,
-	player6 UUID,
-	player7 UUID,
-	player8 UUID,
-	player9 UUID,
-	captain UUID,
-	vice_captain UUID,
+	total_points float,
 	team_name VARCHAR(255),
 	created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP
 );
+ALTER TABLE user_team ALTER COLUMN total_points SET DEFAULT 0.0;

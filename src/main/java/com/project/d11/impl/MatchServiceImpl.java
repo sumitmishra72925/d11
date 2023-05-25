@@ -108,6 +108,7 @@ public class MatchServiceImpl implements MatchService {
 
         CreateTeamDataResponse teamListResponse = new CreateTeamDataResponse();
 
+
         List<WicketKeeperModel> wicketKeepers= new ArrayList<>();
         List<PlayerEntity> team1WicketKeepers = playerService.getPlayersByRoleAndTeamIdAndIsPlaying("WK",team1Id);
         List<PlayerEntity> team2WicketKeepers = playerService.getPlayersByRoleAndTeamIdAndIsPlaying("WK",team2Id);
